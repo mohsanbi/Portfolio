@@ -695,7 +695,45 @@ FROM staging_reviews;
   });
 </script>
 
+<script>
+  let autoScrollActive = true;
+  let hasInteracted = false;
+
+  const stopAutoScroll = () => {
+    hasInteracted = true;
+    autoScrollActive = false;
+  };
+
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach(event => {
+    window.addEventListener(event, stopAutoScroll, { once: true });
+  });
+
+  // Run auto preview only once per session
+  if (!sessionStorage.getItem("previewScrolled")) {
+    sessionStorage.setItem("previewScrolled", "true");
+
+    const scrollStep = () => {
+      if (!autoScrollActive || hasInteracted) return;
+
+      const scrollTop = window.scrollY + window.innerHeight;
+      const scrollHeight = document.documentElement.scrollHeight;
+
+      if (scrollTop < scrollHeight) {
+        window.scrollBy({
+          top: 8, // 🔥 fast preview
+          behavior: "smooth"
+        });
+        requestAnimationFrame(scrollStep);
+      }
+    };
+
+    // Delay so header + title are seen first
+    setTimeout(() => {
+      requestAnimationFrame(scrollStep);
+    }, 1800);
+  }
+</script>
+
+
 </body>
 </html>
-
-
