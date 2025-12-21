@@ -247,6 +247,48 @@ padding: 30px 0 30px;
     </a>
   </div>
 </header>
+<!-- ================= PROJECT VIDEO WITH HINT ================= -->
+<div style="margin-bottom: 30px; position: relative;">
+
+  <!-- Hint Overlay -->
+  <div
+    id="video-hint"
+    style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.7);
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 20px;
+      font-weight: 900;
+      z-index: 10;
+      pointer-events: none;
+    ">
+    🔊 Play
+  </div>
+
+  <!-- Video -->
+  <video
+    id="project-video"
+    src="https://res.cloudinary.com/dnotuemwj/video/upload/v1766336965/Hospital_Project_Presentation_pn3xpd.mp4"
+    controls
+    playsinline
+    preload="metadata"
+    style="
+      width: 100%;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      background: #000;
+    ">
+    Your browser does not support the video tag.
+  </video>
+
+</div>
+
 
 <!-- ================= CONTENT ================= -->
 <div class="container-custom">
@@ -324,6 +366,7 @@ padding: 30px 0 30px;
 </section>
 </div>
 
+
 <!-- ================= JS ================= -->
 <script>
   const menuButton = document.getElementById("mobile-menu-button");
@@ -334,6 +377,86 @@ padding: 30px 0 30px;
   });
 </script>
 
+<script>
+  let autoScrollActive = true;
+  let hasInteracted = false;
+
+  // Stop auto-scroll on any user interaction
+  const stopAutoScroll = () => {
+    hasInteracted = true;
+    autoScrollActive = false;
+  };
+
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach(event => {
+    window.addEventListener(event, stopAutoScroll, { once: true });
+  });
+
+  // Run auto-preview only once per session
+  if (!sessionStorage.getItem("previewScrolled")) {
+    sessionStorage.setItem("previewScrolled", "true");
+
+    const scrollStep = () => {
+      if (!autoScrollActive || hasInteracted) return;
+
+      const scrollTop = window.scrollY + window.innerHeight;
+      const scrollHeight = document.documentElement.scrollHeight;
+
+      if (scrollTop < scrollHeight) {
+        window.scrollBy({
+          top: 8,          // 🔥 increase this for even faster (10–12 max recommended)
+          behavior: "smooth"
+        });
+        requestAnimationFrame(scrollStep);
+      }
+    };
+
+    // Short delay so video + header are seen
+    setTimeout(() => {
+      requestAnimationFrame(scrollStep);
+    }, 1800);
+  }
+</script>
+
+<script>
+  let autoScrollActive = true;
+  let hasInteracted = false;
+
+  // Stop auto-scroll on any user interaction
+  const stopAutoScroll = () => {
+    hasInteracted = true;
+    autoScrollActive = false;
+  };
+
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach(event => {
+    window.addEventListener(event, stopAutoScroll, { once: true });
+  });
+
+  // Run auto-preview only once per session
+  if (!sessionStorage.getItem("previewScrolled")) {
+    sessionStorage.setItem("previewScrolled", "true");
+
+    const scrollStep = () => {
+      if (!autoScrollActive || hasInteracted) return;
+
+      const scrollTop = window.scrollY + window.innerHeight;
+      const scrollHeight = document.documentElement.scrollHeight;
+
+      if (scrollTop < scrollHeight) {
+        window.scrollBy({
+          top: 8,          // 🔥 increase this for even faster (10–12 max recommended)
+          behavior: "smooth"
+        });
+        requestAnimationFrame(scrollStep);
+      }
+    };
+
+    // Short delay so video + header are seen
+    setTimeout(() => {
+      requestAnimationFrame(scrollStep);
+    }, 1800);
+  }
+</script>
+
+
 </body>
 </html>
-
