@@ -416,9 +416,25 @@ padding: 30px 0 30px;
   });
 </script>
 
-  
+  <script>
+  const video = document.getElementById("project-video");
+  const hint = document.getElementById("video-hint");
+
+  // Hide the hint when the video starts playing
+  video.addEventListener("play", () => {
+    hint.style.display = "none";
+  });
+
+  // Optional: also hide if user clicks on the hint itself
+  hint.addEventListener("click", () => {
+    video.play();   // start video on click
+    hint.style.display = "none";
+  });
+</script>
+ 
 </body>
 </html>
+
 
 
 
