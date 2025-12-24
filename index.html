@@ -118,6 +118,74 @@
     .hero-socials { animation-delay: 0.8s; opacity: 0; }
 
   </style>
+
+
+<style>
+.carousel {
+  overflow: hidden;
+  padding: 0; /* zero spacing top/bottom */
+}
+
+#impactTrack {
+  display: flex;
+  gap: 10px; /* smaller gap between cards */
+  will-change: transform;
+}
+
+.impact-card {
+  flex: 0 0 auto;
+  width: 260px;
+  height: 30px;
+  padding: 0px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: black;
+background: #addbdb;
+background: linear-gradient(0deg, rgba(173, 219, 219, 0.65) 0%, rgba(242, 251, 255, 0.63) 99%);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+padding: 0; 
+}
+
+.card-number {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .impact-card { width: 300px; height: 160px; border-radius: 50px; }
+  .card-number { font-size: 2.2rem; }
+  .card-text { font-size: 1rem; }
+}
+
+@media (min-width: 1024px) {
+  .impact-card { width: 320px; height: 180px; border-radius: 60px; }
+  .card-number { font-size: 2.5rem; }
+  .card-text { font-size: 1rem; }
+}
+</style>
+
+
+
+
+
 <style>
     body {
   min-height: max(884px, 100dvh);
@@ -203,7 +271,7 @@
 </a>
 
  <a class="px-5 py-2 border-2 border-accent text-accent rounded-full hover:bg-accent hover:text-white transition-all duration-300" 
-           href="https://drive.google.com/file/d/18-pg_srjI7GXx32aDj8yuzOEvcb1qtty/view?usp=sharing" 
+           href="https://drive.google.com/file/d/1Ku26nJ-bovann6yBeqkMlceESG3ZOXTr/view?usp=sharing" 
            target="_blank">
            CV
         </a>
@@ -233,7 +301,7 @@
     <a class="block py-2 px-4 text-white hover:bg-gray-700" href="#faqs">FAQS</a>
     <a 
       class="block py-2 px-4 text-white hover:bg-gray-700" 
-      href="https://drive.google.com/file/d/18-pg_srjI7GXx32aDj8yuzOEvcb1qtty/view?usp=sharing" 
+      href="https://drive.google.com/file/d/1Ku26nJ-bovann6yBeqkMlceESG3ZOXTr/view?usp=sharing" 
       target="_blank" 
       download
     >
@@ -262,7 +330,8 @@
 <p class="text-lg text-gray-700 animate-slideInUp hero-text-1">Hello,</p>
 <h1 class="text-6xl font-black text-[#0F2837] my-2 font-montserrat animate-slideInUp hero-text-2"><i>I'm Mohsan</i></h1>
 <p class="text-base text-gray-600 font-lato leading-relaxed animate-slideInUp hero-text-3">
-                  Hello,​‍​‌‍​‍‌ I am Mohsan, a committed Business Intelligence Analyst, who loves to convert data into meaningful insights. My expertise lies in discovering the trends, enhancing the performance, and simplifying the complexity of the data to providing the clear, feasible strategies that result in increasing the business. By dint of my strong analytical skills and data-driven mindset, I am the reason why organizations become more intelligent in their decisions, gain better productivity, and maintain their leadership position in a competitive ​‍​‌‍​‍‌market.
+                  Hello,​‍​‌‍​‍‌ I am Mohsan, In Business intelligence/Data Analytics, I come in with a forecasting approach, where data is
+converted into a future-looking, actionable intelligence. My purpose is not just dashboards and reports, but my primary goal is to assist teams in understanding what may happen next and how they can respond to it.
 
                 </p>
 <div class="mt-6 flex justify-center md:justify-start gap-4 animate-slideInUp hero-socials">
@@ -330,6 +399,72 @@
 
 </div>
 </section>
+
+
+<section class="py-0 bg-white overflow-hidden">
+  <div class="container px-0">
+
+    <div class="carousel">
+      <div id="impactTrack" class="flex gap-0">
+        <div class="impact-card">
+          <div class="card-content">
+            <div class="card-number">&#8986;30+</div>
+            <div class="card-text">Hours Saved/Month</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="card-content">
+            <div class="card-number">&#9996;40+</div>
+            <div class="card-text">Projects Completed</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="card-content">
+            <div class="card-number">&#128188; 3</div>
+            <div class="card-text">Years Experience</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="card-content">
+            <div class="card-number">&#9889;Fast</div>
+            <div class="card-text">Delivery</div>
+          </div>
+        </div>
+        <!-- Duplicate cards for seamless loop -->
+      <div class="impact-card">
+          <div class="card-content">
+            <div class="card-number">&#8986;30+</div>
+            <div class="card-text">Hours Saved/Month</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="card-content">
+            <div class="card-number">&#9996;40+</div>
+            <div class="card-text">Projects Completed</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="card-content">
+            <div class="card-number">&#128188; 3</div>
+            <div class="card-text">Years Experience</div>
+          </div>
+        </div>
+        <div class="impact-card">
+          <div class="card-content">
+            <div class="card-number">&#9889;Fast</div>
+            <div class="card-text">Delivery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 <section class="py-16 bg-white" id="skills">
 <div class="container mx-auto px-4">
 <h2 class="text-3xl font-bold font-montserrat text-center mb-12 text-gray-900 aos-init" data-aos="fade-up">My Skills</h2>
@@ -493,7 +628,7 @@
 <img alt="end to end elt" class="w-full h-56 object-cover" src="https://res.cloudinary.com/dnotuemwj/image/upload/elt_fbhg3b.png" loading="lazy" decoding="async">
 <div class="p-6 relative">
 <p class="text-xs font-bold text-accent  tracking-wide mb-2"><span class="bg-pink-100/70 rounded-md"> Data Engineering</span></p>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-accent transition-colors">Healthcare ELT Pipeline</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-accent transition-colors">ELT Pipeline - Cloud DWH</h3>
                     <p class="text-gray-500 text-sm line-clamp-3 bg-cyan-100/40 rounded-md">End-to-end Extract, Load, Transform pipeline using modern cloud stack including BigQuery, dbt, and Airflow.</p>
 <div class="absolute bottom-6 right-6 w-10 h-10 bg-[var(--accent-orange)] rounded-full flex items-center justify-center text-white transform hover:rotate-45 transition-transform">
 <span class="material-symbols-outlined">arrow_forward</span>
@@ -503,11 +638,12 @@
 
 </a>
 
-	
 
 <!-- Project Card 2 -->
 
 <a href="healthcareanalytics.html"
+   target="_blank"
+   rel="noopener noreferrer"
    class="block transform hover:scale-105 transition-transform duration-300 ">
 
 <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 aos-init border-2 border-amber-300" data-aos="fade-up" data-aos-delay="100">
@@ -525,10 +661,11 @@
 </a>
 
 
-
 <!-- Project Card 3 -->
 
 <a href="ecommereceanalytics.html"
+   target="_blank"
+   rel="noopener noreferrer"
    class="block transform hover:scale-105 transition-transform duration-300 ">
 
 <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 aos-init border-2 border-amber-300" data-aos="fade-up" data-aos-delay="100">
@@ -544,6 +681,7 @@
 </div>
 
 </a>
+
 
 
 
@@ -594,10 +732,21 @@
 </div>
 
 <div class="bg-[#e9f7fe] p-4 rounded-md transform hover:bg-blue-200 transition-colors aos-init skill-badges" data-aos="fade-right">
-  <p class="font-bold text-lg text-[var(--accent-orange)]">Automation &nbsp; 
+  <p class="font-bold text-lg text-[var(--accent-orange)]">Other tools &nbsp; 
     <span>Airflow</span>
     <span>Dbt</span>
     <span>Docker</span>
+<span>Git/GitHub</span>
+  </p>
+</div>
+
+<div class="bg-[#e9f7fe] p-4 rounded-md transform hover:bg-blue-200 transition-colors aos-init skill-badges" data-aos="fade-left">
+  <p class="font-bold text-lg text-[var(--accent-orange)]">AI Tools &nbsp; 
+    <span>Copilot</span>
+    <span>ChatGPT</span>
+    <span>Gemini</span>
+    <span>Claude AI</span>
+    <span>Google AutoML</span>
   </p>
 </div>
 
@@ -963,4 +1112,32 @@
     });
   });
 </script>
+
+<script>
+const track = document.getElementById("impactTrack");
+
+// Fast scroll speed (pixels per frame)
+let speed = 1; // increase this value for faster scroll
+let x = 0;
+
+function animate() {
+  x -= speed;
+
+  // Seamless loop
+  if (x <= -track.scrollWidth / 2) {
+    x = 0;
+  }
+
+  track.style.transform = `translateX(${x}px)`;
+  requestAnimationFrame(animate);
+}
+
+// Start animation
+animate();
+</script>
+
+
+
+
+
 </body></html>
